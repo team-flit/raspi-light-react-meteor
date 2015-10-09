@@ -26,8 +26,12 @@ class Light {
   breath (color) {
     var pixelData = this.pixelData;
     var color = this.color;
+    delete color.alpha;
 
-    var offset = 100;
+    var max = _.chain(color).flatten().max().value();
+    var min = parseInt(max / 2);
+
+    var offset = min;
     var isAdding = true;
 
     this.lightInterval = setInterval(function () {
@@ -37,11 +41,11 @@ class Light {
         offset -= 1;
       }
 
-      if (offset <= 100) {
-        offset = 100;
+      if (offset <= min) {
+        offset = min;
         isAdding = true;
-      } else if (offset > 255) {
-        offset = 255;
+      } else if (offset > max) {
+        offset = max;
         isAdding = false;
       }
 
