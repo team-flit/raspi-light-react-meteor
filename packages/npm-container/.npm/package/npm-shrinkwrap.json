@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "rpi-ws281x-native": {
+      "version": "0.3.0",
+      "dependencies": {
+        "nan": {
+          "version": "1.9.0"
+        }
+      }
+    }
+  }
+}
