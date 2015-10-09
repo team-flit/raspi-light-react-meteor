@@ -33,6 +33,7 @@ Index = React.createClass({
               <ul>
                 <li>Raspberry Pi</li>
                 <li>NeoPixel LED Strip</li>
+                <li>Shaded Spherical Glass</li>
                 <li>Styrofoam Sphere</li>
                 <li>Extruded PVC Foam Sheet (포맥스)</li>
                 <li>Emtpy Toilet Paper Roll (휴지심)</li>
