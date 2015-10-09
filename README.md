@@ -27,4 +27,6 @@ Check out more about this project [here](https://github.com/raspberry-node/node-
 # Known Issues
 
 - If meteor is not running due to mongodb startup error
-```$ exports LC_ALL=C```
+```
+$ exports LC_ALL=C
+```

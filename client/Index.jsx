@@ -23,7 +23,7 @@ Index = React.createClass({
         <div className="container">
           <h1>Raspi Light Meteor!</h1>
           <p>Interactive web-controlled light with Raspberry Pi, Meteor and React.js</p>
-          <p><a className="btn btn-primary btn-lg" href="https://github.com/colus001/raspi-light-meteor" target="_blank" role="button">Learn more &raquo;</a></p>
+          <p><a className="btn btn-primary btn-lg" href="https://github.com/team-flit/raspi-light-react-meteor" target="_blank" role="button">Learn more &raquo;</a></p>
         </div>
       </div>
     )
