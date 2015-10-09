@@ -26,12 +26,12 @@ Check out more about this project [here](https://github.com/raspberry-node/node-
 
 # Known Issues
 
-1. If meteor is not running due to mongodb startup error
+###### 1. If meteor is not running due to mongodb startup error
 ```
 $ exports LC_ALL=C
 ```
 
-1. If failed to install dependency kiit
+###### 2. If failed to install dependency kiit
 
 ```
 It's the first time you've run Meteor from a git checkout.
