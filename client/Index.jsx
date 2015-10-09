@@ -21,7 +21,7 @@ Index = React.createClass({
     return (
       <div className="jumbotron">
         <div className="container">
-          <h1>Raspi Light Meteor!</h1>
+          <h1>Interactive Light!</h1>
           <p>Interactive web-controlled light with Raspberry Pi, Meteor and React.js</p>
           <p><a className="btn btn-primary btn-lg" href="https://github.com/team-flit/raspi-light-react-meteor" target="_blank" role="button">Learn more &raquo;</a></p>
         </div>
