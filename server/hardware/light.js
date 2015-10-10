@@ -1,5 +1,5 @@
-var ws281x = Meteor.npmRequire('rpi-ws281x-native');
-var NUM_LEDS = 25;
+let ws281x = Meteor.npmRequire('rpi-ws281x-native');
+let NUM_LEDS = 25;
 var neoPixel = null;
 
 class Light {

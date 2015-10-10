@@ -2,9 +2,9 @@ Light = React.createClass({
   getInitialState() {
     return {
       color: {
-        red: 0,
-        green: 0,
-        blue: 0,
+        red: _.random(0, 255),
+        green: _.random(0, 255),
+        blue: _.random(0, 255),
         alpha: 100
       },
       hex: '#FF0000'
@@ -29,40 +29,44 @@ Light = React.createClass({
 
   componentDidMount() {
     let options = { min: 0, max: 255, from: 100, onChange: this.setColor };
-    $(".slider").ionRangeSlider(options);
+    let colors = this.state.color;
+
+    $(".slider").each(function () {
+      let $slider = $(this);
+      _.each(colors, (color, key) => { if ( $slider.hasClass(key) ) options.from = color; });
+      $slider.ionRangeSlider(options);
+    })
     $('.alphaSlider').ionRangeSlider(_.extend(options, { max: 100 }));
   },
 
   render() {
     return (
       <div className="container">
-        <h3>Color
-          <span className="label label-pill label-default pull-right" style={{backgroundColor: this.getRgba()}}>SAMPLE COLOR
-          </span>
-        </h3>
+        <h3>Color</h3>
         <hr/>
 
         <div className="row">
           <div className="col-md-3">
-            <label>RED</label>
-            <input type="text" name="red" className="slider"/>
-          </div>
-          <div className="col-md-3">
-            <label>GREEN</label>
-            <input type="text" name="green" className="slider" />
-          </div>
-          <div className="col-md-3">
-            <label>BLUE</label>
-            <input type="text" name="blue" className="slider" />
-          </div>
-          <div className="col-md-3">
-            <label>BRIGHTNESS</label>
+            <label>COLOR PICKER</label><br/>
+            <label className="label label-default" style={{backgroundColor: 'red'}}>RED</label>
+            <input type="text" name="red" className="red slider" />
+            <label className="label label-default" style={{backgroundColor: 'green'}}>GREEN</label>
+            <input type="text" name="green" className="green slider" />
+            <label className="label label-default" style={{backgroundColor: 'blue'}}>BLUE</label>
+            <input type="text" name="blue" className="blue slider" />
+            <label className="label label-default">BRIGHTNESS</label>
             <input type="text" name="alpha" className="alphaSlider" />
           </div>
-        </div>
+          <div className="col-md-3">
+            <label>PREVIEW</label>
+            <div style={{backgroundColor: this.getRgba(), width: 200, height: 200, borderRadius: 20}}></div>
+          </div>
 
-        <hr />
-        <LightButtons color={this.state.color}/>
+          <div className="col-md-6">
+            <LightButtons color={this.state.color}/>
+          </div>
+
+        </div>
       </div>
     )
   }

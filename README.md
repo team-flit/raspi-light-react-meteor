@@ -24,11 +24,19 @@ There is [a guide over at adafruit.com](https://learn.adafruit.com/neopixels-on-
 
 Check out more about this project [here](https://github.com/raspberry-node/node-rpi-ws281x-native)
 
+# BOM
+- Raspberry Pi
+- NeoPixel LED Strip
+- Shaded Spherical Glass
+- Styrofoam Sphere
+- Extruded PVC Foam Sheet (포맥스)
+- Emtpy Toilet Paper Roll (휴지심)
+
 # Known Issues
 
 ###### 1. Meteor is not running due to mongodb startup error
 ```
-$ exports LC_ALL=C
+$ export LC_ALL=C
 ```
 
 ###### 2. Failed to install dependency kiit
