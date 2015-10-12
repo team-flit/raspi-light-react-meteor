@@ -25,7 +25,7 @@ Index = React.createClass({
             <div className="col-lg-8">
               <h1>Interactive Light!</h1>
               <p>Interactive web-controlled light with Raspberry Pi, Meteor and React.js</p>
-              <p>Built with Raspberry pi, Meteor and React.js, of course, with NeoPixel LED strip. This project requires understanding of belisted components. Not recommended for beginners.</p>
+              <p>Built with Raspberry pi, Meteor and React.js, of course, with NeoPixel LED strip. This project especially requires understanding of <i>Raspbian Jessie, Meteor and React.js</i>. Not recommended for beginners.</p>
 
               <p><a className="btn btn-primary btn-lg" href="https://github.com/team-flit/raspi-light-react-meteor" target="_blank" role="button">Learn more &raquo;</a></p>
             </div>

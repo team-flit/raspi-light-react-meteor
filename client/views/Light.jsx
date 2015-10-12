@@ -11,6 +11,16 @@ Light = React.createClass({
     }
   },
 
+  generateRandomColor() {
+    this.setState({
+      color: {
+        red: _.random(0, 255),
+        green: _.random(0, 255),
+        blue: _.random(0, 255),
+      }
+    });
+  },
+
   getRgba() {
     var color = this.state.color;
     return `rgba(${color.red}, ${color.green}, ${color.blue}, ${color.alpha/100})`;
@@ -36,7 +46,7 @@ Light = React.createClass({
       _.each(colors, (color, key) => { if ( $slider.hasClass(key) ) options.from = color; });
       $slider.ionRangeSlider(options);
     })
-    $('.alphaSlider').ionRangeSlider(_.extend(options, { max: 100 }));
+    $('.alpha.slider').ionRangeSlider(_.extend(options, { max: 100 }));
   },
 
   render() {
@@ -55,7 +65,7 @@ Light = React.createClass({
             <label className="label label-default" style={{backgroundColor: 'blue'}}>BLUE</label>
             <input type="text" name="blue" className="blue slider" />
             <label className="label label-default">BRIGHTNESS</label>
-            <input type="text" name="alpha" className="alphaSlider" />
+            <input type="text" name="alpha" className="alpha slider" />
           </div>
           <div className="col-md-3">
             <label>PREVIEW</label>
