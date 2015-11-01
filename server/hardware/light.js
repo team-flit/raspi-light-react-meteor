@@ -11,11 +11,11 @@ class Light {
   }
 
   setColor (color) {
-    var options = _.extend([0,0,0], [ color.red, color.green, color.blue ]);
+    var colors = _.extend([0,0,0], [ color.red, color.green, color.blue ]);
     this.color = _.clone(color, true);
 
     for ( var i = 0; i < this.numberOfLeds; i++) {
-      this.pixelData[i] = NeoPixelUtil.rgb2Int(options[0], options[1], options[2]);
+      this.pixelData[i] = NeoPixelUtil.rgb2Int(colors[0], colors[1], colors[2]);
     }
   }
 
@@ -95,7 +95,7 @@ NeoPixelUtil = {
     else { pos -= 170; return this.rgb2Int(pos * 3, 255 - pos * 3, 0); }
   },
 
-  rgb2Int(r, g, b,) {
+  rgb2Int(r, g, b) {
     return ((r & 0xff) << 16) + ((g & 0xff) << 8) + (b & 0xff);
   }
 }
