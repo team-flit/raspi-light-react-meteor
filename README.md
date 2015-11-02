@@ -9,6 +9,8 @@ Built with Raspberry pi, Meteor and React.js, of course, with NeoPixel LED strip
 
 http://meteor-universal.tumblr.com/post/132266856859/1st-time-installation-meteor-12x-universal-raspbian
 
+Check more information about meteor-universal at [Github Repo](https://github.com/4commerce-technologies-AG/meteor)
+
 - [Download raspbian-jessie](https://www.raspberrypi.org/downloads/raspbian/)
 
 ### Install Meteor on Raspberry Pi
