@@ -7,7 +7,7 @@ Built with Raspberry pi, Meteor and React.js, of course, with NeoPixel LED strip
 
 ### Setup Rapsberry pi
 
-http://meteor-universal.tumblr.com/post/118809833179/1st-time-installation-meteor-universal-raspbian-wheezy
+http://meteor-universal.tumblr.com/post/132266856859/1st-time-installation-meteor-12x-universal-raspbian
 
 - [Download raspbian-jessie](https://www.raspberrypi.org/downloads/raspbian/)
 
@@ -37,28 +37,4 @@ Check out more about this project [here](https://github.com/raspberry-node/node-
 ###### 1. Meteor is not running due to mongodb startup error
 ```
 $ export LC_ALL=C
-```
-
-###### 2. Failed to install dependency kiit
-
-```
-It's the first time you've run Meteor from a git checkout.
-I will download a kit containing all of Meteor's dependencies.
-
-You are trying to run Meteor on yet not official supported platform: Linux_armv6l
-There is currently no pre-built dev_bundle available for your system.
-Check https://github.com/4commerce-technologies-AG/meteor to get
-the information how you may generate your own dev_bundle using
-scripts/generate-dev-bundle.sh
-
-Unable to download: https://dl.bintray.com/4commerce-technologies-ag/meteor-universal/arm_dev_bundles/dev_bundle_Linux_armv6l_0.5.14.tar.gz
-Pre-built tarball is not available!
-
-Failed to install dependency kit.
-```
-
-If you see this error, generate dev bundle manually.
-
-```
-scripts/generate-dev-bundle.sh
 ```
